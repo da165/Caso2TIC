@@ -11,8 +11,8 @@ public class GeneradorReferencias {
         int filasMatriz = Integer.parseInt(parametros[0]);
         int columnasMatriz = Integer.parseInt(parametros[1]);
         int tamanioVector = Integer.parseInt(parametros[2]);
-        int numeroPasadas = Integer.parseInt(parametros[3]);
-        int tamanioPagina = Integer.parseInt(parametros[4]);
+        int tamanioPagina = Integer.parseInt(parametros[3]);
+        int numeroPasadas = Integer.parseInt(parametros[4]);        
         String archivoFinal = parametros[5];
 
         generarArchivoReferencias(filasMatriz, columnasMatriz, tamanioVector, numeroPasadas, tamanioPagina, archivoFinal);
