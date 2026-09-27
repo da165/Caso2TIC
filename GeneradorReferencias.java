@@ -23,13 +23,13 @@ public class GeneradorReferencias {
         long numeroReferencias = (long) numeroPasadas * 6L * filasMatriz * columnasMatriz;
 
         try (BufferedWriter escribirArchivo = new BufferedWriter(new FileWriter(archivoFinal))){
-            escribirArchivo.write("TP=" + tamanioPagina +"/n");
-            escribirArchivo.write("NF1=" + filasMatriz + "/n");
-            escribirArchivo.write("NC1=" + columnasMatriz + "/n");
-            escribirArchivo.write("NV=" + tamanioVector + "/n");
-            escribirArchivo.write("numPasadas=" + numeroPasadas +"/n");
-            escribirArchivo.write("NR= "+ numeroReferencias + "/n");
-            escribirArchivo.write("NP=" + numeroPagina +"/n");
+            escribirArchivo.write("TP=" + tamanioPagina);
+            escribirArchivo.write("NF1=" + filasMatriz);
+            escribirArchivo.write("NC1=" + columnasMatriz);
+            escribirArchivo.write("NV=" + tamanioVector);
+            escribirArchivo.write("numPasadas=" + numeroPasadas);
+            escribirArchivo.write("NR=" + numeroReferencias);
+            escribirArchivo.write("NP=" + numeroPagina);
 
             int baseVector = filasMatriz*columnasMatriz;
 
@@ -45,9 +45,9 @@ public class GeneradorReferencias {
                         
                          String marcadorMatriz = "[mat1-" + i + "-" + j + "]";
                          String marcadorVector = "[v-0-" + (j % tamanioVector) + "]";
-                         escribirArchivo.write(marcadorMatriz + "," + paginaMatriz + "," + offsetMatriz + "/n");
-                         escribirArchivo.write(marcadorVector + "," + paginaVector + "," + offsetVector + "/n");
-                         escribirArchivo.write(marcadorMatriz + "," + paginaMatriz + "," + offsetMatriz + "/n");
+                         escribirArchivo.write(marcadorMatriz + "," + paginaMatriz + "," + offsetMatriz);
+                         escribirArchivo.write(marcadorVector + "," + paginaVector + "," + offsetVector);
+                         escribirArchivo.write(marcadorMatriz + "," + paginaMatriz + "," + offsetMatriz);
 
                     }
                 }
@@ -62,9 +62,9 @@ public class GeneradorReferencias {
                         
                          String marcadorMatriz = "[mat1-" + i + "-" + j + "]";
                          String marcadorVector = "[v-0-" + (i % tamanioVector) + "]";
-                         escribirArchivo.write(marcadorMatriz + "," + paginaMatriz + "," + offsetMatriz + "/n");
-                         escribirArchivo.write(marcadorVector + "," + paginaVector + "," + offsetVector + "/n");
-                         escribirArchivo.write(marcadorMatriz + "," + paginaMatriz + "," + offsetMatriz + "/n");
+                         escribirArchivo.write(marcadorMatriz + "," + paginaMatriz + "," + offsetMatriz);
+                         escribirArchivo.write(marcadorVector + "," + paginaVector + "," + offsetVector);
+                         escribirArchivo.write(marcadorMatriz + "," + paginaMatriz + "," + offsetMatriz);
                     }
                 }
             }
