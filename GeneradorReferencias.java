@@ -24,12 +24,19 @@ public class GeneradorReferencias {
 
         try (BufferedWriter escribirArchivo = new BufferedWriter(new FileWriter(archivoFinal))){
             escribirArchivo.write("TP=" + tamanioPagina);
+            escribirArchivo.newLine();
             escribirArchivo.write("NF1=" + filasMatriz);
+            escribirArchivo.newLine();
             escribirArchivo.write("NC1=" + columnasMatriz);
+            escribirArchivo.newLine();
             escribirArchivo.write("NV=" + tamanioVector);
+            escribirArchivo.newLine();
             escribirArchivo.write("numPasadas=" + numeroPasadas);
+            escribirArchivo.newLine();
             escribirArchivo.write("NR=" + numeroReferencias);
+            escribirArchivo.newLine();
             escribirArchivo.write("NP=" + numeroPagina);
+            escribirArchivo.newLine();
 
             int baseVector = filasMatriz*columnasMatriz;
 
@@ -46,9 +53,11 @@ public class GeneradorReferencias {
                          String marcadorMatriz = "[mat1-" + i + "-" + j + "]";
                          String marcadorVector = "[v-0-" + (j % tamanioVector) + "]";
                          escribirArchivo.write(marcadorMatriz + "," + paginaMatriz + "," + offsetMatriz);
+                         escribirArchivo.newLine();
                          escribirArchivo.write(marcadorVector + "," + paginaVector + "," + offsetVector);
+                         escribirArchivo.newLine();
                          escribirArchivo.write(marcadorMatriz + "," + paginaMatriz + "," + offsetMatriz);
-
+                         escribirArchivo.newLine();
                     }
                 }
                 for(int j=0; j < columnasMatriz; j++){
@@ -63,8 +72,11 @@ public class GeneradorReferencias {
                          String marcadorMatriz = "[mat1-" + i + "-" + j + "]";
                          String marcadorVector = "[v-0-" + (i % tamanioVector) + "]";
                          escribirArchivo.write(marcadorMatriz + "," + paginaMatriz + "," + offsetMatriz);
+                         escribirArchivo.newLine();
                          escribirArchivo.write(marcadorVector + "," + paginaVector + "," + offsetVector);
+                         escribirArchivo.newLine();
                          escribirArchivo.write(marcadorMatriz + "," + paginaMatriz + "," + offsetMatriz);
+                         escribirArchivo.newLine();
                     }
                 }
             }
