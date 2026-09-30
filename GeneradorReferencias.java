@@ -46,9 +46,9 @@ public class GeneradorReferencias {
                          int direccionMatriz = i * columnasMatriz + j;
                          int paginaMatriz = direccionMatriz / tamanioPagina;
                          int offsetMatriz = direccionMatriz % tamanioPagina;
-                         int direccionVector = baseVector + (j + tamanioVector);
-                         int paginaVector = direccionVector / tamanioVector;
-                         int offsetVector = direccionVector % tamanioVector;
+                         int direccionVector = baseVector + (j % tamanioVector);
+                         int paginaVector = direccionVector / tamanioPagina;
+                         int offsetVector = direccionVector % tamanioPagina;
                         
                          String marcadorMatriz = "[mat1-" + i + "-" + j + "]";
                          String marcadorVector = "[v-0-" + (j % tamanioVector) + "]";
@@ -65,9 +65,9 @@ public class GeneradorReferencias {
                          int direccionMatriz = i * columnasMatriz + j;
                          int paginaMatriz = direccionMatriz / tamanioPagina;
                          int offsetMatriz = direccionMatriz % tamanioPagina;
-                         int direccionVector = baseVector + (i + tamanioVector);
-                         int paginaVector = direccionVector / tamanioVector;
-                         int offsetVector = direccionVector % tamanioVector;
+                         int direccionVector = baseVector + (i % tamanioVector);
+                         int paginaVector = direccionVector / tamanioPagina;
+                         int offsetVector = direccionVector % tamanioPagina;
                         
                          String marcadorMatriz = "[mat1-" + i + "-" + j + "]";
                          String marcadorVector = "[v-0-" + (i % tamanioVector) + "]";
